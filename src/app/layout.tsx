@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Yaldevi } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
+import { cn } from "@/lib/utils";
 
 const inter = Yaldevi({ subsets: ["latin"] });
 
@@ -17,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={cn(inter.className,"bg-light")}>
         <Navbar/>
         {children}
         </body>
