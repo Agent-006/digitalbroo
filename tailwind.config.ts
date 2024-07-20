@@ -27,6 +27,9 @@ const config = {
           DEFAULT: "#F6EBDC",
           200: "#FFF",
         },
+        medium:{
+          DEFAULT: "#F1DDC8"
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
