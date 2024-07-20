@@ -18,10 +18,10 @@ const Navbar = () => {
             Techacee
           </h1>
           <ul className="hidden md:flex gap-x-7 md:gap-x-6">
-            {navItems.map((item, index) => {
+            {navItems.map((item) => {
               const isActive = path === item.path;
               return (
-                <li key={index}>
+                <li key={item.path}>
                   <Link
                     href={item.path}
                     className={`${
@@ -34,13 +34,13 @@ const Navbar = () => {
               );
             })}
           </ul>
-          <Link href={''}>
-            <Button variant={'outline'} className="hidden md:block border border-[#6A3834] rounded-2xl" asChild>
+          <Link href="">
+            <Button variant={"outline"} className="hidden md:block border border-[#6A3834] rounded-2xl" asChild>
               <Text text="Get a Proposal" />
             </Button>
           </Link>
           <div className="lg:hidden md:hidden top-5 right-4 block z-50">
-            <MobileNavbar/>
+            <MobileNavbar />
           </div>
         </div>
       </div>
