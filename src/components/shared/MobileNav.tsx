@@ -10,6 +10,7 @@ import { navItems } from "@/constants/navitems";
 import Link from "next/link";
 import { TiThMenu } from "react-icons/ti";
 import Text from "./Text";
+import { Button } from "../ui/button";
 
 const MobileNavbar = () => {
     return (
@@ -22,12 +23,16 @@ const MobileNavbar = () => {
                     {navItems.map((item) => (
                         <Link href={item.path} key={item.path}>
                             <div className="my-2 items-center rounded-lg py-4 w-40 mx-[3rem] bg-[#F4E2CB] hover:bg-[#FFEBD1]">
-                                <SheetHeader className="">
+                                <SheetHeader>
                                     <SheetTitle className="text-[#6A3834] text-sm">{item.name}</SheetTitle>
                                 </SheetHeader>
+
                             </div>
                         </Link>
                     ))}
+                    <Button variant={"outline"} className="ml-[50px] mt-1 border border-[#6A3834] rounded-2xl px-[2rem] py-6" asChild>
+              <Text text="Get a Proposal" />
+            </Button>
                 </div>
             </SheetContent>
         </Sheet>
