@@ -3,7 +3,6 @@ import React from "react";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { navItems } from "@/constants/navitems";
-import Text from "./Text";
 import MobileNavbar from "./MobileNav";
 import { usePathname } from "next/navigation";
 
@@ -36,7 +35,7 @@ const Navbar = () => {
           </ul>
           <Link href="">
             <Button variant={"outline"} className="hidden md:block border border-[#6A3834] rounded-2xl" asChild>
-              <Text text="Get a Proposal" />
+              <p className="text-dark-foreground">Get a Proposal</p>
             </Button>
           </Link>
           <div className="lg:hidden md:hidden top-5 right-4 block z-50">

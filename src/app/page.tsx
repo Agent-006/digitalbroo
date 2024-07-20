@@ -1,5 +1,6 @@
-import Hero from "@/components/shared/Hero";
-import Offer from "@/components/shared/Offer";
+import Hero from "@/app/components/Hero";
+import Offer from "./components/Offer";
+
 
 
 
