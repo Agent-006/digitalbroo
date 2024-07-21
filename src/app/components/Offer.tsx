@@ -1,4 +1,4 @@
-import { CardBody, CardContainer, CardItem } from '@/components/ui/3d-card';
+import { Card } from '@/components/ui/card';
 import React from 'react';
 
 const Offer = () => {
@@ -16,35 +16,19 @@ const Offer = () => {
           <span>life</span>
         </p>
       </div>
-      <div className="flex mt-1 w-full md:w-[50rem] lg:w-[70rem] flex-col md:flex-row items-center md:justify-center gap-2 mx-5">
-        <CardContainer>
-          <CardBody className="bg-medium flex items-center justify-center">
-            <CardItem className="text-center text-lg font-bold">
-              home
-            </CardItem>
-          </CardBody>
-        </CardContainer>
-        <CardContainer>
-          <CardBody className="bg-medium flex items-center justify-center">
-            <CardItem className="text-center text-lg font-bold">
-              home
-            </CardItem>
-          </CardBody>
-        </CardContainer>
-        <CardContainer>
-          <CardBody className="bg-medium flex items-center justify-center">
-            <CardItem className="text-center text-lg font-bold">
-              home
-            </CardItem>
-          </CardBody>
-        </CardContainer>
-        <CardContainer>
-          <CardBody className="bg-medium flex items-center justify-center">
-            <CardItem className="text-center text-lg font-bold">
-              home
-            </CardItem>
-          </CardBody>
-        </CardContainer>
+      <div className="flex mt-1 w-full md:w-[50rem] lg:w-full flex-col md:flex-row gap-9 items-center md:justify-center mx-5 lg:mx-20 xl:mx-40">
+        <Card className='lg:w-[15rem] xl:w-[22rem] md:w-[13rem] md:h-[13rem] lg:h-[16rem] xl:h-[20rem] h-[15rem] w-[25rem]'>
+          hello
+        </Card>
+        <Card className='lg:w-[15rem] xl:w-[22rem] md:w-[13rem] md:h-[13rem] lg:h-[16rem] xl:h-[20rem] h-[15rem] w-[25rem]'>
+          hello
+        </Card>
+        <Card className='lg:w-[15rem] xl:w-[22rem] md:w-[13rem] md:h-[13rem] lg:h-[16rem] xl:h-[20rem] h-[15rem] w-[25rem]'>
+          hello
+        </Card>
+        <Card className='lg:w-[15rem] xl:w-[22rem] md:w-[13rem] md:h-[13rem] lg:h-[16rem] xl:h-[20rem] h-[15rem] w-[25rem]'>
+          hello
+        </Card>
       </div>
     </div>
   );
