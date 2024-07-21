@@ -1,14 +1,16 @@
 import Hero from "@/app/components/Hero";
 import Offer from "./components/Offer";
+import AboutSection from "./components/AboutSection";
 
 
 
 
 export default function Home() {
   return (
-    <div className="flex flex-col h-auto mb-20">
+    <div className="flex flex-col h-auto mb-20 gap-5 xl:gap-0">
       <Hero/>
       <Offer/>
+      <AboutSection/>
     </div>
   );
 }
