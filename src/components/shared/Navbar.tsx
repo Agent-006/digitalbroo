@@ -13,10 +13,10 @@ const Navbar = () => {
     <div className="w-full h-[4rem] relative top-0">
       <div className="flex mx-4 md:mx-10 lg:mx-20 xl:mx-40 h-full">
         <div className="flex justify-between items-center w-full px-4 sm:px-6 md:px-10 h-full mt-2 ">
-          <h1 className="lg:text-xl text-lg font-bold bg-gradient-to-b from-[#0F324F] via-[#E66E42] to-[#6A3834] bg-clip-text text-transparent">
+          <h1 className="text-lg lg:text-xl xl:text-2xl font-bold bg-gradient-to-b from-[#0F324F] via-[#E66E42] to-[#6A3834] bg-clip-text text-transparent">
             Techacee
           </h1>
-          <ul className="hidden md:flex gap-x-7 md:gap-x-6">
+          <ul className="hidden md:flex gap-x-6 lg:gap-x-7 xl:gap-x-8">
             {navItems.map((item) => {
               const isActive = path === item.path;
               return (
@@ -25,7 +25,7 @@ const Navbar = () => {
                     href={item.path}
                     className={`${
                       isActive ? "border-b-2 border-[#6A3834]" : ""
-                    } lg:text-[16px] md:text-[12px] text-[#6A3834]`}
+                    } text-[#6A3834] md:text-[12px] lg:text-[16px] xl:text-[20px]`}
                   >
                     {item.name}
                   </Link>
