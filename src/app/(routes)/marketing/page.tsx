@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function digitalMarketing() {
+export default function Marketing() {
   return (
     <div>
       digitalMarketing
