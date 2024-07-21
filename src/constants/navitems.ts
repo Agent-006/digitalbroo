@@ -5,11 +5,11 @@ export const navItems = [
     },
     {
         name:"Digital Marketing",
-        path:"/digital-marketing"
+        path:"/marketing"
     },
     {
         name:"Design & Development",
-        path:"/design&development"
+        path:"/design"
     },
     {
         name:"Blog",
@@ -17,6 +17,6 @@ export const navItems = [
     },
     {
         name:'Contact Us',
-        path: "/contact-us"
+        path: "/contact"
     }
 ]
