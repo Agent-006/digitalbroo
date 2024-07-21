@@ -1,6 +1,7 @@
 import Hero from "@/app/components/Hero";
 import Offer from "./components/Offer";
 import AboutSection from "./components/AboutSection";
+import WorkExample from "./components/WorkExample";
 
 
 
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero/>
       <Offer/>
       <AboutSection/>
+      <WorkExample/>
     </div>
   );
 }

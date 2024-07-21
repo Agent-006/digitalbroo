@@ -32,7 +32,7 @@ const AboutSection = () => {
 
                 <div className="flex md:w-1/2 w-full md:h-full h-1/2 items-center justify-center">
                     <div className="flex flex-col h-4/5 md:w-4/5 w-full md:text-left text-center gap-2">
-                        <h1 className='text-dark text-2xl md:text-4xl xl:text-7xl font-bold xl:font-extrabold xl:mt-40'>About Us</h1>
+                        <h1 className='text-dark text-3xl md:text-4xl xl:text-7xl font-bold xl:font-extrabold xl:mt-40'>About Us</h1>
                         <p className='text-dark-foreground xl:text-3xl mt-10'>
                             At Techacee, we help build your product with precision <br /> 
                             and creativity. Our team specializes in transforming your  <br />  
