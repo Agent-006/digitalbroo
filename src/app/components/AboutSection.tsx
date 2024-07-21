@@ -4,7 +4,7 @@ import { TiArrowRight } from 'react-icons/ti';
 
 const AboutSection = () => {
     return (
-        <div className='flex md:flex-row flex-col gap-5 w-full h-screen items-center justify-center'>
+        <div className='flex md:flex-row flex-col gap-5 w-full max-w-screen-2xl h-screen items-center justify-center'>
             <div className="flex md:flex-row flex-col w-full h-full">
                 <div className="flex flex-col md:w-1/2 w-full md:h-full h-1/2 flex-wrap">
                     <div className="flex flex-col w-1/2 h-full items-center justify-center gap-10">
