@@ -13,7 +13,7 @@ const Hero = () => {
         <p className="text-left mt-4 text-lg text-dark">
           At Techacee, we help build your product with precision and creativity. Our team specializes in transforming your ideas into exceptional digital experiences. Partner with us to bring your vision to life.
         </p>
-        <Button variant="outline" className="border border-dark rounded-lg mt-5 flex items-center">
+        <Button variant="outline" className="border border-dark bg-light rounded-lg mt-5 flex items-center">
           Explore More <TiArrowRight className="ml-2" />
         </Button>
       </div>

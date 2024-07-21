@@ -34,7 +34,7 @@ const Navbar = () => {
             })}
           </ul>
           <Link href="">
-            <Button variant={"outline"} className="hidden md:block border border-[#6A3834] rounded-2xl" asChild>
+            <Button variant={"outline"} className="hidden md:block bg-light border border-[#6A3834] rounded-2xl" asChild>
               <p className="text-dark-foreground">Get a Proposal</p>
             </Button>
           </Link>
