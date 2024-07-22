@@ -13,7 +13,7 @@ const Navbar = () => {
     <div className="w-full min-w-screen-2xl h-[4rem] relative top-0">
       <div className="flex mx-4 md:mx-10 lg:mx-20 xl:mx-40 h-full">
         <div className="flex justify-between items-center w-full px-4 sm:px-6 md:px-10 h-full mt-2 ">
-          <h1 className="lg:text-xl text-lg font-bold bg-gradient-to-b from-[#0F324F] via-[#E66E42] to-[#6A3834] bg-clip-text text-transparent">
+          <h1 className="text-xl xl:text-4xl font-bold bg-gradient-to-b from-[#0F324F] via-[#E66E42] to-[#6A3834] bg-clip-text text-transparent">
             Techacee
           </h1>
           <ul className="hidden md:flex gap-x-7 md:gap-x-6">
@@ -25,7 +25,7 @@ const Navbar = () => {
                     href={item.path}
                     className={`${
                       isActive ? "border-b-2 border-[#6A3834]" : ""
-                    } lg:text-[16px] md:text-[12px] text-[#6A3834]`}
+                    } lg:text-[16px] md:text-[12px] xl:text-xl text-[#6A3834]`}
                   >
                     {item.name}
                   </Link>
@@ -34,8 +34,8 @@ const Navbar = () => {
             })}
           </ul>
           <Link href="">
-            <Button variant={"outline"} className="hidden md:block bg-light border border-[#6A3834] rounded-2xl" asChild>
-              <p className="text-dark-foreground">Get a Proposal</p>
+            <Button variant={"outline"} className="hidden md:block bg-light border border-[#6A3834] rounded-2xl text-center" asChild>
+              <p className="text-dark-foreground xl:text-xl">Get a Proposal</p>
             </Button>
           </Link>
           <div className="lg:hidden md:hidden top-5 right-4 block z-50">

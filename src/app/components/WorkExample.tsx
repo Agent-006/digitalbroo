@@ -3,7 +3,7 @@ import React from 'react'
 
 const WorkExample = () => {
   return (
-    <div className='flex flex-col w-full items-center h-auto overflow-hidden gap-5 xl:gap-10'>
+    <div className='flex flex-col w-full items-center h-auto overflow-hidden gap-5 xl:gap-10 max-w-screen-2xl bg-blue-300'>
 
 
       <div className="flex flex-col w-full items-center h-2/5">

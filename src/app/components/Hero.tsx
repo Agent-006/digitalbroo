@@ -5,7 +5,7 @@ import { TiArrowRight } from 'react-icons/ti';
 
 const Hero = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center px-4 h-screen max-h-screen-xl w-full max-w-screen-xl mx-auto">
+    <div className="flex flex-col md:flex-row items-center px-4 h-screen max-h-screen-xl w-full max-w-screen-2xl mx-auto bg-blue-300">
       <div className="flex flex-col items-start md:w-1/2 w-full lg:mt-0 md:mt-10 mt-20 lg:pr-8">
         <p className="lg:text-5xl md:text-4xl text-2xl font-bold text-dark text-left">
           We Help to Build <br /> Your Product
