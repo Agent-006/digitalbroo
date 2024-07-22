@@ -3,7 +3,7 @@ import React from 'react'
 
 const WorkExample = () => {
   return (
-    <div className='flex flex-col w-full items-center h-auto overflow-hidden gap-5 xl:gap-10'>
+    <div className='flex flex-col w-full items-center h-auto overflow-hidden gap-5 xl:gap-10 max-w-screen-2xl bg-blue-300'>
 
 
       <div className="flex flex-col w-full items-center h-2/5">
@@ -12,7 +12,7 @@ const WorkExample = () => {
       </div>
 
 
-      <div className="flex flex-col md:flex-row w-full items-center justify-center  h-4/5 gap-3 md:gap-10 xl:gap-20">
+      <div className="flex flex-col md:flex-row w-full items-center justify-center  h-4/5 gap-3 md:gap-10 xl:gap-20 mt-10">
 
         <div className="md:h-full h-3/4 rounded-md md:w-2/5 w-[25rem] md:ml-20 shadow-xl flex flex-row border-light-200 ">
           <div className="flex flex-col w-1/2 md:w-2/5 text-left gap-3 md:gap-5">
@@ -28,7 +28,7 @@ const WorkExample = () => {
 
         <div className="md:h-full h-3/4 rounded-md md:w-2/5 w-[25rem] mx-1 md:mr-20 shadow-xl flex flex-row">
           <div className="flex w-1/2">
-          <h1 className='ml-5 md:ml-[7rem] text-dark-foreground text-xl xl:text-3xl mt-[8rem]'>Some Work <br /> Samples
+          <h1 className='ml-5 md:ml-[7rem] text-dark-foreground font-bold text-xl xl:text-3xl mt-[8rem]'>Some Work <br /> Samples
           </h1>
 
           </div>
