@@ -13,7 +13,7 @@ export default function Home() {
   return (
     
     <div className="w-full px-2 md:px-10 xl:px-[10rem]">
-      <div className="flex flex-col gap-20 md:gap-5 max-w-wrapper bg-blue-300">
+      <div className="flex flex-col gap-20 md:gap-5 max-w-wrapper">
       <Hero/>
       {/* <Offer/>
       <AboutSection/>

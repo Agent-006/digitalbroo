@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <div className="w-full">
       <div className="flex items-center h-20 md:h-16 xl:h-20 w-full justify-between px-2 md:px-10 xl:px-[10rem]">
-        <div className="">
+        <div>
           <h1 className="text-lg xl:text-4xl font-bold bg-gradient-to-b from-[#0F324F] via-[#E66E42] to-[#6A3834] bg-clip-text text-transparent">
             DigitalBroo
           </h1>
@@ -37,7 +37,7 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className="">
+        <div>
           <div className="hidden md:block">
             <Link href="">
               <Button
