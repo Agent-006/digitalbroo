@@ -11,34 +11,31 @@ const Navbar = () => {
 
   return (
     <div className="w-full">
-      <div className="flex items-center h-20 md:h-16 xl:h-20 w-full justify-between px-2 md:px-10 xl:px-[10rem]">
-        <div>
-          <h1 className="text-lg xl:text-4xl font-bold bg-gradient-to-b from-[#0F324F] via-[#E66E42] to-[#6A3834] bg-clip-text text-transparent">
+      <div className="flex items-center h-20 md:h-24 w-full justify-between px-2 md:px-10 xl:px-32">
+        <div className="">
+          <h1 className="text-lg font-bold bg-gradient-to-b from-[#0F324F] via-[#E66E42] to-[#6A3834] bg-clip-text text-transparent">
             DigitalBroo
           </h1>
         </div>
 
-        <div className="items-center hidden md:block">
-          <ul className="flex gap-5 xl:gap-[3rem]">
-            {navItems.map((item) => {
-              const isActive = path === item.path;
-              return (
-                <li key={item.path}>
-                  <Link
-                    href={item.path}
-                    className={`${isActive ? "border-b-2 border-[#6A3834]" : ""
-                      } lg:text-[15px] md:text-[12px] xl:text-xl text-[#6A3834]`}
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
+        <div className="items-center gap-6 hidden md:flex">
+          {navItems.map((item) => {
+            const isActive = path === item.path;
+            return (
+              <h1 key={item.path}>
+                <Link
+                  href={item.path}
+                  className={`${isActive ? "border-b-2 border-[#6A3834]" : ""} md:text-[6px] xl:text-xl text-[#6A3834]`}
+                >
+                  {item.name}
+                </Link>
+              </h1>
+            );
+          })}
         </div>
 
         <div>
-          <div className="hidden md:block">
+          <div className="hidden md:flex">
             <Link href="">
               <Button
                 variant={"outline"}
@@ -50,12 +47,12 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <div className="block md:hidden mr-1">
+          <div className="flex md:hidden mr-1">
             <MobileNavbar />
           </div>
         </div>
       </div>
-      <hr className="border-t-2 border-[#C19E96] mx-2 md:mx-10 xl:mx-[10rem]" />
+      <hr className="border-t-2 border-[#C19E96] mx-2 md:mx-8 xl:mx-32 md:-mt-6" />
     </div>
   );
 };
