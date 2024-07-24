@@ -5,54 +5,48 @@ import { Button } from "../ui/button";
 import { navItems } from "@/constants/navitems";
 import MobileNavbar from "./MobileNav";
 import { usePathname } from "next/navigation";
+import { Logo } from "./Logo";
+import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const path = usePathname();
 
   return (
-    <div className="w-full">
-      <div className="flex items-center h-20 md:h-24 w-full justify-between px-2 md:px-10 xl:px-32">
-        <div className="">
-          <h1 className="text-lg font-bold bg-gradient-to-b from-[#0F324F] via-[#E66E42] to-[#6A3834] bg-clip-text text-transparent">
-            DigitalBroo
-          </h1>
-        </div>
+    <div className="w-full h-auto md:h-20 fixed top-0 z-50 bg-light flex items-center justify-center">
+      <div className="flex items-center w-full h-full justify-between px-5 py-3 md:px-10 2xl:px-64 border-b border-opacity-50 border-dark">
+        <Logo className="flex items-center justify-center" />
 
-        <div className="items-center gap-6 hidden md:flex">
-          {navItems.map((item) => {
+        <div className="items-center gap-x-9 hidden md:flex">
+          {navItems.map((item, index) => {
             const isActive = path === item.path;
             return (
-              <h1 key={item.path}>
-                <Link
-                  href={item.path}
-                  className={`${isActive ? "border-b-2 border-[#6A3834]" : ""} md:text-[6px] xl:text-xl text-[#6A3834]`}
-                >
-                  {item.name}
-                </Link>
-              </h1>
+              <Link
+                key={index}
+                href={item.path}
+                className={cn(
+                  "text-lg text-dark-foreground navlink relative font-medium tracking-normal",
+                  isActive && "active"
+                )}
+              >
+                {item.name}
+              </Link>
             );
           })}
         </div>
 
-        <div>
-          <div className="hidden md:flex">
-            <Link href="">
-              <Button
-                variant={"outline"}
-                className="bg-light border border-[#6A3834] rounded-2xl text-center"
-                asChild
-              >
-                <p className="text-dark-foreground xl:text-xl">Get a Proposal</p>
-              </Button>
-            </Link>
-          </div>
-
-          <div className="flex md:hidden mr-1">
-            <MobileNavbar />
-          </div>
+        <div className="hidden md:flex">
+          <Link href="/">
+            <Button
+              variant={"outline"}
+              className="border border-dark rounded-2xl text-center bg-light hover:bg-dark hover:text-light transition-all duration-300 ease-in-out"
+              asChild
+            >
+              <p className="text-dark-foreground xl:text-xl">Get a Proposal</p>
+            </Button>
+          </Link>
         </div>
+        <MobileNavbar className="md:hidden" />
       </div>
-      <hr className="border-t-2 border-[#C19E96] mx-2 md:mx-8 xl:mx-32 md:-mt-6" />
     </div>
   );
 };
