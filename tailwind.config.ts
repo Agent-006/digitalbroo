@@ -14,7 +14,7 @@ const config = {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1440px",
       },
     },
     extend: {
@@ -70,7 +70,7 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       maxWidth: {
-        'wrapper': '1400px',
+        'wrapper': '1440px',
       },
       keyframes: {
         "accordion-down": {

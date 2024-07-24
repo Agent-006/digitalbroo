@@ -5,22 +5,24 @@ import { TiArrowRight } from 'react-icons/ti';
 
 const Hero = () => {
   return (
-    <div className="flex flex-col md:flex-row px-2 md:gap-20 gap-20 items-center justify-center min-h-screen">
-      <div className="flex flex-col gap-4 w-55%">
+    <div className="flex flex-col md:flex-row md:gap-1 gap-5 items-center justify-center md:justify-between min-h-screen w-full">
+      <div className="flex flex-col gap-4 md:w-3/5 w-full md:-translate-y-1/4">
         <p className="lg:text-6xl xl:text-6xl md:text-5xl text-3xl font-bold text-dark text-left ">
           We Help to Build <br /> Your Product
         </p>
-        <p className="text-left mt-4 text-xs xl:text-2xl text-dark ">
+        <p className="text-left mt-4 text-sm md:text-xl text-dark ">
           At Techacee, we help build your product with precision <br/> and creativity. Our team specializes in transforming your <br/> ideas into exceptional digital experiences. Partner with <br/> us to bring your vision to life.
         </p>
-        <Button variant="outline" className="border border-dark bg-light rounded-lg mt-5 flex items-center xl:py-6 xl:text-xl w-36">
-          Explore More <TiArrowRight className="ml-2" />
+        <div className="">
+        <Button variant={'outline'} className='border border-dark bg-light'>
+          Explore More{""}<TiArrowRight/>
         </Button>
+        </div>
       </div>
 
 
 
-      <div className="w-45%">
+      <div className="md:w-2/5 xl:w-1/2 w-full md:-translate-y-1/4">
         <div className="w-full relative h-full hidden md:block">
           <Image
             src="/component8.png"
