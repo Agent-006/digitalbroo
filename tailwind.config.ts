@@ -70,7 +70,7 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       maxWidth: {
-        'wrapper': '1440px',
+        'wrapper': '1400px',
       },
       keyframes: {
         "accordion-down": {

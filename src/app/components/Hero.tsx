@@ -10,8 +10,8 @@ const Hero = () => {
         <p className="lg:text-6xl xl:text-6xl md:text-5xl text-3xl font-bold text-dark text-left ">
           We Help to Build <br /> Your Product
         </p>
-        <p className="text-left mt-4 text-sm xl:text-2xl text-dark ">
-          At Techacee, we help build your product with precision <br className='hidden md:block' /> and creativity. Our team specializes in transforming your <br className='hidden md:block' /> ideas into exceptional digital experiences. Partner with <br className='hidden md:block' /> us to bring your vision to life.
+        <p className="text-left mt-4 text-xs xl:text-2xl text-dark ">
+          At Techacee, we help build your product with precision <br/> and creativity. Our team specializes in transforming your <br/> ideas into exceptional digital experiences. Partner with <br/> us to bring your vision to life.
         </p>
         <Button variant="outline" className="border border-dark bg-light rounded-lg mt-5 flex items-center xl:py-6 xl:text-xl w-36">
           Explore More <TiArrowRight className="ml-2" />

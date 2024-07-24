@@ -18,7 +18,7 @@ const Navbar = () => {
           </h1>
         </div>
 
-        <div className="md:flex flex-row items-center hidden">
+        <div className="items-center hidden md:block">
           <ul className="flex gap-5 xl:gap-[3rem]">
             {navItems.map((item) => {
               const isActive = path === item.path;
@@ -27,7 +27,7 @@ const Navbar = () => {
                   <Link
                     href={item.path}
                     className={`${isActive ? "border-b-2 border-[#6A3834]" : ""
-                      } lg:text-[16px] md:text-[12px] xl:text-xl text-[#6A3834]`}
+                      } lg:text-[15px] md:text-[12px] xl:text-xl text-[#6A3834]`}
                   >
                     {item.name}
                   </Link>
