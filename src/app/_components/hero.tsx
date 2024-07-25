@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
 import { Button } from '../../components/ui/button';
-import { TiArrowRight } from 'react-icons/ti';
 import { MoveRight } from 'lucide-react';
 
 const Hero = () => {
@@ -61,4 +60,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
