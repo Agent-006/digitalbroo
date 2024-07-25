@@ -5,7 +5,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="h-full w-full py-14 flex items-center">
+    <div className="h-full w-full py-8 flex items-center">
       <div className="w-full h-full flex flex-col-reverse md:flex-row items-center justify-between gap-4 md:gap-10">
         <div className="w-full md:w-[50%] h-full py-5 flex items-center justify-center gap-3.5 md:gap-10">
           <div className="flex flex-col items-center justify-center gap-4 md:gap-8">
