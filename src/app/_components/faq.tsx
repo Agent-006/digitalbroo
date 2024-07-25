@@ -10,14 +10,17 @@ const Faq = () => {
     return (
         <div className='w-full h-full flex items-center py-10 md:px-10'>
             <div className="h-full w-full items-center flex-col">
-                <div className="w-full px-10 py-5 text-center space-y-4">
+                <div className="w-full md:px-10 py-5 text-center space-y-4 relative">
+                    <div className="top-5 w-full absolute text-center">
+                        <h1 className='md:text-7xl text-5xl opacity-10 text-dark-foreground font-bold'>Frequently {" "} Ask {" "} Question</h1>
+                    </div>
                     <h1 className='md:text-5xl text-4xl font-bold text-dark'>Frequently Ask Question</h1>
                     <h2 className='text-md text-dark'><span className='text-[#E66E42] border-b-2 border-[#E66E42] cursor-pointer hover:text-dark'>Click Here</span> to know more</h2>
                 </div>
                 <div className="w-full md:h-[70vh] h-[75vh] flex md:flex-row flex-col md:px-10 gap-5 py-5">
                     <div className="md:w-1/2 w-full h-full">
                         <h1 className='text-black font-bold text-lg'>Popular Questions</h1>
-                        <ScrollArea className="h-full w-full rounded-md border">
+                        <ScrollArea className="h-[60vh] md:h-full w-full rounded-md border">
                         {
                             faqItem.map((item) => (
                                 <Accordion key={item.id} type="single" collapsible>
