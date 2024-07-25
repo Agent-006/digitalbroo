@@ -1,4 +1,3 @@
-import React from "react";
 
 export const MaxWrapper = ({ children , className}: { children: React.ReactNode, className?: string }) => {
   return (

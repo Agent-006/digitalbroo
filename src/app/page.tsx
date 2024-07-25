@@ -1,12 +1,13 @@
-import Hero from "@/app/components/Hero";
-import "./globals.css";
-import Offer from "./components/Offer";
+
 import { MaxWrapper } from "@/components/shared/MaxWrapper";
+import Hero from "./_components/hero";
+import About from "./_components/about";
 
 export default function Home() {
   return (
     <MaxWrapper className="">
-      <Hero />
+      {/* <Hero /> */}
+      <About/>
     </MaxWrapper>
   );
 }
