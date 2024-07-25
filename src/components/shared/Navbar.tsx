@@ -5,45 +5,48 @@ import { Button } from "../ui/button";
 import { navItems } from "@/constants/navitems";
 import MobileNavbar from "./MobileNav";
 import { usePathname } from "next/navigation";
+import { Logo } from "./Logo";
+import { cn } from "@/lib/utils";
 
 const Navbar = () => {
   const path = usePathname();
 
   return (
-    <div className="w-full h-[4rem] relative top-0">
-      <div className="flex mx-4 md:mx-10 lg:mx-20 xl:mx-40 h-full">
-        <div className="flex justify-between items-center w-full px-4 sm:px-6 md:px-10 h-full mt-2 ">
-          <h1 className="text-lg lg:text-xl xl:text-2xl font-bold bg-gradient-to-b from-[#0F324F] via-[#E66E42] to-[#6A3834] bg-clip-text text-transparent">
-            Techacee
-          </h1>
-          <ul className="hidden md:flex gap-x-6 lg:gap-x-7 xl:gap-x-8">
-            {navItems.map((item) => {
-              const isActive = path === item.path;
-              return (
-                <li key={item.path}>
-                  <Link
-                    href={item.path}
-                    className={`${
-                      isActive ? "border-b-2 border-[#6A3834]" : ""
-                    } text-[#6A3834] md:text-[12px] lg:text-[16px] xl:text-[20px]`}
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-          <Link href="">
-            <Button variant={"outline"} className="hidden md:block bg-light border border-[#6A3834] rounded-2xl" asChild>
-              <p className="text-dark-foreground">Get a Proposal</p>
+    <div className="w-full h-auto md:h-20 fixed top-0 z-50 bg-light flex items-center justify-center">
+      <div className="flex items-center w-full h-full justify-between px-5 py-3 md:px-10 2xl:px-64 border-b border-opacity-50 border-dark">
+        <Logo className="flex items-center justify-center" />
+
+        <div className="items-center gap-x-9 hidden md:flex">
+          {navItems.map((item, index) => {
+            const isActive = path === item.path;
+            return (
+              <Link
+                key={index}
+                href={item.path}
+                className={cn(
+                  "text-lg text-dark-foreground navlink relative font-medium tracking-normal",
+                  isActive && "active"
+                )}
+              >
+                {item.name}
+              </Link>
+            );
+          })}
+        </div>
+
+        <div className="hidden md:flex">
+          <Link href="/">
+            <Button
+              variant={"outline"}
+              className="border border-dark rounded-2xl text-center bg-light hover:bg-dark hover:text-light transition-all duration-300 ease-in-out"
+              asChild
+            >
+              <p className="text-dark-foreground xl:text-xl">Get a Proposal</p>
             </Button>
           </Link>
-          <div className="lg:hidden md:hidden top-5 right-4 block z-50">
-            <MobileNavbar />
-          </div>
         </div>
+        <MobileNavbar className="md:hidden" />
       </div>
-      <hr className="border-t-2 border-[#C19E96] mx-4 md:mx-10 lg:mx-20 xl:mx-40" />
     </div>
   );
 };

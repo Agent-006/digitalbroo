@@ -30,8 +30,6 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
   }
-
-
 }
 
 @layer base {
@@ -41,4 +39,17 @@
   body {
     @apply bg-background;
   }
+  .navlink::after {
+    @apply content-[''] absolute bg-[#E66E42] h-[1.7px] md:h-[2.6px] w-[0%] left-0 -bottom-[3.5px] rounded-xl duration-300;
+  }
+  .navlink:hover::after {
+    @apply w-[100%];
+  }
+  .active::after {
+    @apply absolute bg-[#E66E42] h-[1.7px] md:h-[2.6px] w-[100%] left-0 -bottom-[3.5px] rounded-xl duration-300;
+  }
+}
+
+::-webkit-scrollbar{
+  display: none;
 }
