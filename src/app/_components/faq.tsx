@@ -21,31 +21,36 @@ const Faq = () => {
                     <div className="md:w-1/2 w-full h-full">
                         <h1 className='text-black font-bold text-lg'>Popular Questions</h1>
                         <ScrollArea className="h-[60vh] md:h-full w-full rounded-md border">
-                        {
-                            faqItem.map((item) => (
-                                <Accordion key={item.id} type="single" collapsible>
-                                    <AccordionItem value={String(item.id)} className='my-2 shadow-lg bg-light px-4'>
-                                        <AccordionTrigger>{item.ques}</AccordionTrigger>
-                                        <AccordionContent>
-                                            {item.ans}
-                                        </AccordionContent>
-                                    </AccordionItem>
-                                </Accordion>
-                            ))
-                        }
+                            <Accordion type="single" collapsible>
+                                {
+                                    faqItem.map((item, index) => {
+                                        const itemValue = `item -${index}`
+                                        return (
+                                            <AccordionItem
+                                                key={index}
+                                                value={itemValue} className='my-2 shadow-lg bg-light px-4'>
+                                                <AccordionTrigger>{item.ques}</AccordionTrigger>
+                                                <AccordionContent>
+                                                    {item.ans}
+                                                </AccordionContent>
+                                            </AccordionItem>
+                                        )
+                                    })
+                                }
+                            </Accordion>
                         </ScrollArea>
                     </div>
 
                     <div className="md:w-1/2 w-full h-full md:pl-24 xl:pl-24 md:py-20 xl:py-16">
                         <div className="h-full w-full items-center justify-center flex flex-col gap-4 text-center">
-                            <Image src={'/g10.png'} alt={'faq'} width={200} height={200}/>
+                            <Image src={'/g10.png'} alt={'faq'} width={200} height={200} />
                             <h1 className='text-dark font-bold text-3xl'>Any Question?</h1>
                             <h3 className='text-xs text-dark-foreground'>You can ask anything you want to know about Feedback</h3>
                             <div className="w-full flex flex-col text-left gap-2">
                                 <h2 className='text-dark-foreground text-sm'>Let me know.</h2>
                                 <Input type="email" placeholder="Write Here" />
                                 <div className="w-full flex items-center justify-center">
-                                <Button variant={'outline'} className='bg-dark text-white hover:bg-dark-foreground border border-black text-lg rounded-2xl w-24'>Send</Button>
+                                    <Button variant={'outline'} className='bg-dark text-white hover:bg-dark-foreground border border-black text-lg rounded-2xl w-24'>Send</Button>
                                 </div>
                             </div>
                         </div>
