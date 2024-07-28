@@ -16,7 +16,7 @@ const ChooseUs = () => {
                     <div className="h-full w-full text-white">
                         <InfiniteMovingCards
                             items={testimonials}
-                            direction="right"
+                            direction="left"
                             speed="slow"
                         />
                     </div>
