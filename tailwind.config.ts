@@ -1,6 +1,22 @@
 import type { Config } from "tailwindcss";
 
-const config = {
+const colors = require("tailwindcss/colors");
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
+
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}
+
+const config: Config = {
   darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
@@ -27,8 +43,8 @@ const config = {
           DEFAULT: "#F6EBDC",
           200: "#FFF",
         },
-        medium:{
-          DEFAULT: "#F1DDC8"
+        medium: {
+          DEFAULT: "#F1DDC8",
         },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -70,7 +86,7 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       maxWidth: {
-        'wrapper': '1440px',
+        wrapper: "1440px",
       },
       keyframes: {
         "accordion-down": {
@@ -81,14 +97,24 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        scroll: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
+        },
       },
       animation: {
+        scroll:
+          "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-} satisfies Config;
+  plugins: [
+    require("tailwindcss-animate"),
+    addVariablesForColors,
+  ],
+};
 
 export default config;
