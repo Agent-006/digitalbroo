@@ -5,6 +5,7 @@ import About from "./_components/about";
 import Faq from "./_components/faq";
 import ChooseUs from "./_components/chooseUs";
 import WorkExamples from "./_components/workExamples";
+import Testimonials from "./_components/testimonials";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <About/>
       <ChooseUs/>
       <WorkExamples/>
+      <Testimonials/>
       <Faq/>
     </MaxWrapper>
   );
