@@ -3,6 +3,7 @@ import { Yaldevi } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import { cn } from "@/lib/utils";
+import Footer from "./_components/footer";
 
 const inter = Yaldevi({ subsets: ["latin"] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({
       <body className={cn(inter.className,"bg-light")}>
         <Navbar/>
         {children}
+        <Footer/>
         </body>
     </html>
   );
