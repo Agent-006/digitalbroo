@@ -6,7 +6,7 @@ import { MoveRight } from 'lucide-react';
 const Hero = () => {
   return (
     <div className="flex w-full md:h-full h-[80vh] md:py-20 py-10 items-center">
-      <div className="md:px-10 items-center justify-center flex flex-col md:flex-row w-full h-full">
+      <div className="md:px-10 items-center justify-center flex flex-col md:flex-row w-full h-full gap-10 md:gap-0">
         <div className="md:w-1/2 w-full md:h-full h-1/2 py-5 md:py-10 flex flex-col space-y-5">
           <h1 className="xl:text-6xl md:text-5xl text-4xl font-bold text-dark text-left">
             We Help to Build Your Product

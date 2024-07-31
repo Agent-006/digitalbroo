@@ -50,7 +50,7 @@ const Faq = () => {
                                 <h2 className='text-dark-foreground text-sm'>Let me know.</h2>
                                 <Input type="email" placeholder="Write Here" />
                                 <div className="w-full flex items-center justify-center">
-                                    <Button variant={'outline'} className='bg-dark text-white hover:bg-dark-foreground border border-black text-lg rounded-2xl w-24'>Send</Button>
+                                    <Button variant={'outline'} className='bg-dark text-white hover:bg-dark-foreground hover:text-white border border-black text-lg rounded-2xl w-24'>Send</Button>
                                 </div>
                             </div>
                         </div>

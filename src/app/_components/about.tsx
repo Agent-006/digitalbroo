@@ -18,7 +18,7 @@ const About = () => {
               </h1>
               <Image
                 alt="wave"
-                src="./wave.svg"
+                src="/wave.png"
                 width={80}
                 height={50}
                 className="absolute bottom-3 md:bottom-5 right-2 md:right-4 select-none pointer-events-none w-[35%]"
